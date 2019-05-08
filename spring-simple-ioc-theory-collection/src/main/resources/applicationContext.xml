@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context" default-lazy-init="true"
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">  
+<!-- 	<bean id="userService" class="com.yanxml.spring.train.ioc.theory.collection.service.impl.UserServiceImpl">
+		<property name="sets">
+			<set>
+				<value>Set1</value>
+				<value>Set2</value>
+				<value>Set3</value>
+			</set>
+		</property>
+	</bean> -->
+<!-- 	<bean id="userService" class="com.yanxml.spring.train.ioc.theory.collection.service.impl.UserServiceImpl">
+		<property name="lists">
+			<list>
+				<value>List1</value>
+				<value>List2</value>
+				<value>List3</value>
+			</list>
+		</property>
+	</bean> -->
+<!-- 	<bean id="userService" class="com.yanxml.spring.train.ioc.theory.collection.service.impl.UserServiceImpl">
+		<property name="properties">
+			<props>
+				<prop key="key1">Properties1</prop>
+				<prop key="key2">Properties2</prop>
+				<prop key="key3">Properties3</prop>
+			</props>
+		</property>
+	</bean> -->
+	<bean id="userService" class="com.yanxml.spring.train.ioc.theory.collection.service.impl.UserServiceImpl">
+		<property name="maps">
+			<map>
+				<entry key="key1" value="Map1"></entry>
+				<entry key="key2" value="Map2"></entry>
+				<entry key="key3" value="Map3"></entry>
+			</map>
+		</property>
+	</bean>
+</beans>

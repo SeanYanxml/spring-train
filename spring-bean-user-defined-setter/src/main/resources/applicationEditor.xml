@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<bean id="customEditorConfigurer"
+		class="org.springframework.beans.factory.config.CustomEditorConfigurer">
+		<!-- 把值注入到CustomEditorConfigurer的 Map类型的customEditors属性 -->
+		<property name="customEditors">
+			<map>
+				<entry key="java.util.Date">
+					<bean class="com.us.demo.util.DatePropertyEditor">
+						<property name="format" value="yyyy-MM-dd"></property>
+						<!-- 可以灵活修改 需要转换的日期的格式 -->
+						<!-- <property name="format" value="yyyy-MM-dd"></property> -->
+					</bean>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

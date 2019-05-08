@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context" 
+    xmlns:tx="http://www.springframework.org/schema/tx" 
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd  
+                http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd  
+                http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+                http://www.springframework.org/schema/aop  http://www.springframework.org/schema/aop/spring-aop-2.5.xsd">
+<aop:config>
+	<aop:aspect id="aspect" ref="interceptor">
+	<!-- 注意  execution (* com.us.demo.UserManagerImpl.*(..)) 这个左端是没有左括号的-->
+	<!-- 		<aop:pointcut id="cut" expression="execution (* com.us.demo.UserManagerImpl.*(..))"></aop:pointcut> -->
+		<aop:pointcut id="cut" expression="execution (* com.us.demo.UserManagerImpl.*(..))"></aop:pointcut>
+		<aop:before pointcut-ref="cut" method="doBefore"></aop:before>
+		<aop:after-returning pointcut-ref="cut" method="doAfterReturning"></aop:after-returning>
+		<aop:after pointcut-ref="cut" method="doAfter"></aop:after>
+		<aop:after-throwing pointcut-ref="cut" method="doAfterThrowing"></aop:after-throwing>
+		<aop:around pointcut-ref="cut" method="doAround"></aop:around>
+	</aop:aspect>
+</aop:config>
+<bean id="userManager" class="com.us.demo.UserManagerImpl"></bean>
+<bean id="interceptor" class="com.us.demo.Interceptor"/>
+
+</beans>

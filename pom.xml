@@ -11,6 +11,23 @@
 		<module>spring-quickstart</module>
 		<module>spring-bean-init</module>
 		<module>spring-bean-init-theory</module>
+		<module>spring-bean-bean-config</module>
+		<module>spring-simple-ioc</module>
+		<module>spring-simple-ioc-theory</module>
+		<module>spring-simple-ioc-theory-collection</module>
+		<module>spring-simple-ioc-setter</module>
+		<module>spring-bean-autowire</module>
+		<module>spring-bean-common-setter</module>
+		<module>spring-bean-user-defined-setter</module>
+		<module>spring-static-proxy</module>
+		<module>spring-dynamic-proxy</module>
+		<module>spring-aop-cglib</module>
+		<module>spring-aop-annonation</module>
+		<module>spring-aop-config-file</module>
+		<module>spring-transaction-annonation</module>
+		<module>spring-transaction-config-file</module>
+		<module>spring-proxy-static</module>
+		<module>spring-proxy-dynamic</module>
 	</modules>
 	
 	

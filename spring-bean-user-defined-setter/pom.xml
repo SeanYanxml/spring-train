@@ -1,0 +1,31 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.yanxml</groupId>
+		<artifactId>spring-train</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>spring-bean-user-defined-setter</artifactId>
+	<dependencies>
+		<!-- 笔记作者一般使用这个包 但是貌似这个包和 Spring-core 和 Spring-Context 内部的一些结构不太一样 -->
+		<!-- 使用原来的jar包会出错 不知道为什么 但是需要注意这点 包括这个转换的问题 -->
+		<!-- 使用的时候 要非常注意这点 -->
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring</artifactId>
+			<version>2.5.6.SEC01</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+		</dependency>
+	</dependencies>
+</project>
